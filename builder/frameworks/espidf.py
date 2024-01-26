@@ -1615,9 +1615,9 @@ if mmu_page_size != "64KB":
 
 action = copy.deepcopy(env["BUILDERS"]["ElfToBin"].action)
 
-action.cmd_list = env["BUILDERS"]["ElfToBin"].action.cmd_list.replace(
-    "-o", extra_elf2bin_flags + " -o"
-)
+#action.cmd_list = env["BUILDERS"]["ElfToBin"].action.cmd_list.replace(
+#    "-o", extra_elf2bin_flags + " -o"
+#)
 env["BUILDERS"]["ElfToBin"].action = action
 
 #
